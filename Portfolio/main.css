@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+}
+
+.profile-pic {
+    border-radius: 25%;
+    align-self: center;
+    height: 200px;
+    width: 200px;
+}
+
+.site-headders {
+    background-color: aqua;
+    color: aliceblue;
+    height: 100vh;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-headder-content {
+    margin: 10px;
+}
+
+.song-link {
+    color: aliceblue;
+}
