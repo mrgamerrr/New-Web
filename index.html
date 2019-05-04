@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="aqua">
+    <meta name="description" content="HTML">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Everything">
+    <!--	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="w3.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <title>
+        Home
+    </title>
+    <link rel="loader" type="loader" href="/home/system/Desktop/HTML Work/Loader.html">
+    <!--Loader
+	<style>
+		.loader {
+			border: 16px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 16px solid blue;
+			border-right: 16px solid green;
+			/*border-bottom: 16px solid red;*/
+			width: 120px;
+			height: 120px;
+			-webkit-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>-->
+</head>
+
+<style>
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+    }
+    
+    #myBtn:hover {
+        background-color: #555;
+    }
+    
+    button {
+        text-align: center;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 12%;
+        opacity: 0.9;
+        float: right;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+    
+    .cancelbtn {
+        text-align: center;
+        background-color: #f44336;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 12%;
+        opacity: 0.9;
+        float: right;
+    }
+    /* Style For Link */
+    
+    a:link {
+        color: rgb(160, 7, 248);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:visited {
+        color: rgb(160, 7, 248);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    /* Style For Border */
+    
+    p.dotted {
+        border-style: dotted;
+    }
+    
+    p.dashed {
+        border-style: dashed;
+    }
+    
+    p.solid {
+        border-style: solid;
+    }
+    
+    p.double {
+        border-style: double;
+    }
+    
+    p.groove {
+        border-style: groove;
+    }
+    
+    p.ridge {
+        border-style: ridge;
+    }
+    
+    p.inset {
+        border-style: inset;
+    }
+    
+    p.outset {
+        border-style: outset;
+    }
+    
+    p.none {
+        border-style: none;
+    }
+    
+    p.hidden {
+        border-style: hidden;
+    }
+    
+    p.mix {
+        border-style: dotted dashed solid double;
+    }
+    
+    hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+    }
+    /*Background Image
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.bg {
+		background-image: url("unsplash1.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.pg {
+		background-image: url("unsplash11.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.dg {
+		background-image: url("unsplash12.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.cg {
+
+		background-image: url("unsplash7.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.eg {
+		background-image: url("unsplash14.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.ng {
+		background-image: url("unsplash8.jpg");
+
+		height: 50%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.yg {
+		background-image: url("unsplash9.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}
+
+	body,
+	html {
+		height: 100%;
+		margin: 0;
+	}
+
+	.kg {
+		background-image: url("unsplash13.jpg");
+
+		height: 100%;
+		background-position: center;
+		background-repeat: repeat;
+		background-size: cover;
+	}*/
+    /*Style For List*/
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+    }
+    
+    .main {
+        text-align: center;
+    }
+    
+    marquee {
+        background: red;
+        position: relative;
+        -webkit-animation: mymove 5s infinite;
+        /* Safari 4.0 - 8.0 */
+        animation: mymove 5s infinite;
+    }
+    /* Safari 4.0 - 8.0 */
+    
+    @-webkit-keyframes mymove {
+        from {
+            left: 0px;
+        }
+        to {
+            left: 200px;
+        }
+    }
+    
+    @keyframes mymove {
+        from {
+            left: 0px;
+        }
+        to {
+            left: 800px;
+        }
+    }
+</style>
+
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<script>
+    function myFunction() {
+        window.print();
+    }
+</script>
+
+<body>
+    <!--Brand Image & Home Button-->
+    <div class="bg">
+        <a class="navbar-brand" href="index.html" title="Back to homepage">
+            <img src="Favicon/Html2.png" width="147" onerror="this.src=''; this.onerror=null;" alt="HTML" class="img-responsive">
+
+        </a>
+        <!--Login And sign Up Button-->
+        <a href="3signup.html" class="w3-btn w3-green w3-right">Sign Up</a>
+        <a href="2Log in.html" class="w3-btn w3-red w3-right">Log In</a>
+
+        <!-- BookMarks -->
+        <ul>
+            <b>
+				<li style="text-align: center;"><a href="Pages\Heading.html">Heading</a></li>
+				<li style="text-align: center;"><a href="Pages\Paragraph.html">Paragraph</a></li>
+				<li style="text-align: center;"><a href="Pages\Styles.html">style</a></li>
+				<li style="text-align: center;"><a href="#q1">Quotation</a></li>
+				<li style="text-align: center;"><a href="#l1">Links</a></li>
+				<li style="text-align: center;"><a href="#n1">Border Style</a></li>
+				<li style="text-align: center;"><a href="#c1">Colors</a></li>
+				<li style="text-align: center;"><a href="Form2.html">Form</a></li>
+				<li style="text-align: center;"><a href="6Contact.html">Contact
+						Us</a></li>
+				<li style="text-align: center;"><a href="About Us.html">About Us</a></li>
+							</b>
+        </ul>
+
+
+        <!--Go To Top Button-->
+        <input type="image" src="GO.png" onclick="topFunction()" id="myBtn" title="Go To Top" alt="Submit" width="48" height="48">
+
+        <!-- This is a Heading -->
+        <h1 id="h1"> Here Start's Heading</h1>
+        <h1 style="color:MediumSeaGreen">This is heading 1</h1>
+        <h2>This is heading 2</h2>
+
+        <!-- This is Headings With Style -->
+
+        <h1 style="color:orange;">Hello</h1>
+        <h2 style="color:green;">Hello </h2>
+        <h3> Hello </h3>
+        <h2 style="color:orange;">Hello</h2>
+        <h1 style="color:green;">Hello </h1>
+
+        <a href="Pages\Heading.html" class="w3-btn w3-green w3-left">Learn More About
+			HTML Heading...</a>
+        <br>
+        <br>
+        <hr>
+
+        <!-- Paragraphs -->
+        <div class=" pg">
+            <h3 id="p1" style="text-align:center;color:Blue;">Here Start's Paragraph
+            </h3>
+            <p>This Is A Paragraph</p>
+            <p>This is<br>a paragraph<br>with line breaks</p>
+
+            <!--Predisded Paragraph-->
+            <pre style="font-size:20px; color:tomato">
+I am showing very much interest to join in your company.
+is the main reason I am requesting you to schedule 
+the Technical interview.
+			</pre>
+            <h3 style="text-align:center;color:violet;font-family:vardana;font-size:200%;">This Is A Heading
+            </h3>
+            <p style="text-align:left;color:green;font-family:courier;font-size:150%;">This Is A Paragraph</p>
+            <p style="text-align:left;color:blue;font-family:arial;font-size:100%" ;>This Is A Paragraph</p>
+
+            <a href="Pages\Paragraph.html" class="w3-btn w3-green w3-left">Learn
+					More About HTML Paragraphs...</a>
+            <br>
+            <br>
+            <hr>
+            <!-- Style -->
+            <div class="dg">
+                <h2 style="text-align:center; color: rgb(234, 5, 255)">Styles</h2>
+                <h1 style="font-family:vardana;">This Is A Heading</h1>
+                <p style="font-family:courier;">This Is A Paragraph</p>
+
+                <h1 style="font-size:300%;">This Is A Heading With Style</h1>
+                <p style="font-size:300%;">This Is A Paragraph With Style</p>
+
+
+                <h1 style="text-align:center;">This Is A Heading</h1>
+                <p style="text-align:center;color:red;">This Is A Paragraph</p>
+                <p style="text-align:left; font-size:20px" ;>This Is A Paragraph</p>
+                <a href="Pages\Styles.html" class="w3-btn w3-green w3-left">Learn
+						More About CSS Style...</a>
+                <br>
+                <br>
+                <hr>
+                <!--  Text Formating  -->
+                <div class="cg">
+                    <h3 style="text-align:center">Text Formatting</h3>
+                    <p style="text-align: left; color: teal;"><b>Text Formating</b> </p>
+                    <p id="t1" style="text-align:center;"><b>This Text Is Bold</b></p>
+                    <p style="text-align:left"><i>This Text Is Italic</i></p>
+                    <p style="text-align:center;">This Is<sub>Subscript</sub>And<sup>Superscript</sup></p>
+                    <p style="text-align:left;"><strong>This Text Is Importent</strong></p>
+                    <p style="text-align:center;"><em>This Text Is Emphasized</em></p>
+                    <p style="text-align:left;"><mark>This Text Is Marked</mark></p>
+                    <p style="text-align:center"><small>This Text Is Small</small></p>
+                    <p style="text-align:left;">This Text Is <del>Deleted</del> Removed </p>
+                    <p style="text-align:center;">This Is <ins>Inserted</ins> Text </p>
+
+                    <pre>
+<b>In order to write a good paragraph</b>,<i>students 
+need to understand the four <sub>essential</sub> 
+elements of paragraph<sup>writing</sup></i><strong>and 
+howeach element contributes to the whole</strong>.<em>
+The four elements </em> <mark>Essential to good paragraph
+writing</mark> <small>are: unity,</small> <del>order</del>
+<ins>coherence </ins>,and completeness. 
+</pre>
+                    <hr>
+
+                    <!-- Quotation -->
+                    <div class="eg">
+                        <h3 id="q1" style="text-align:center;color:deeppink;">Quotation</h3>
+                        <p style="text-align:center;">WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+
+                        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                            For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+                        </blockquote>
+
+                        <p style="text-align:center;color:red; font-size:150%; "><abbr title="World Health Organization">WHO</abbr></p>
+
+                        <address>
+									HTML We Web Siter<br> Visi Us At:<br>
+									html.websiterr
+									<br>6, CA Los Angeles<br>
+								</address>
+                        <img src="unsplash1.jpg" width="220" height="277">
+                        <p><cite>The Picture Of Hot Air Balloons</cite> BY Someone.</p>
+
+                        <p style="text-align:center;color:darkorchid">
+                            <bdo dir="rtl" id="b1"><b>
+                            This Text Will Be Written From Right To Left
+                        </b></bdo></p>
+
+                        <!-- This is a comment -->
+                        <p>This A Paragraph Under A comment</p>
+
+                        <!-- Inline CSS -->
+                        <h1 style="color:blue;">This Is Blue Heading With Inline CSS</h1>
+                        <hr>
+
+                        <!-- Links -->
+                        <div class="ng">
+                            <h2 id="l1" style="text-align: center;color: violet;"><b>LINKS</b></h2>
+                            <p style="text-align:center;"><a href="https://www.google.co.in/" target="_blank">Google</a></p>
+                            <p style="text-align:center;"><a href="https://unsplash.com/" target="_parent">Free Hd
+											Wallpapres</a></p>
+                            <hr>
+
+                            <!-- Border Style -->
+                            <div class="yg">
+                                <h3 id="n1" style="text-align: center;color:red"><b>Border Styles</b>
+                                </h3>
+                                <p class="dotted" style="color: hotpink">A Dotted Border</p>
+                                <p class="dashed" style="color:magenta;">A Dashed Border</p>
+                                <p class="solid" style="color: navy;">A Solid Border</p>
+                                <p class="double" style="color: orangered;">A Double Border</p>
+                                <p class="groove" style="color: tomato;">A Groove Border</p>
+                                <p class="ridge" style="color: teal">A Ridge Border</p>
+                                <p class="inset" style="color:royalblue;">A Inset Border</p>
+                                <p class="outset" style="color: coral;">A Outset Border</p>
+                                <p class="mix" style="color: deeppink;">A Mix Border</p>
+                                <p class="hidden" style="color: gold;">Hidden Border</p>
+                                <p class="none">No Border</p>
+                                <hr>
+
+                                <!-- RGB Color Value -->
+                                <div class="kg">
+                                    <h1 id="c1" style="color:rgb(255,0,0)">This Is Heading With RGB Color Value
+                                    </h1>
+                                    <h2 style="color:rgb(255,255,0)">Heading</h2>
+                                    <h3 style="color:rgb(0,255,0)">Heading</h3>
+                                    <h4 style="color:rgb(0,255,255)">Heading</h4>
+                                    <h5 style="color:rgb(0,0,255)">Heading</h5>
+
+                                    <!-- Hexadecimal Color Value -->
+                                    <h1 style="color:#ff0000">This Is Heading With Hexadecimal Color Value
+                                    </h1>
+                                    <h2 style="color:#00ff00">This Is Heading</h2>
+                                    <!-- HSL Color Value -->
+                                    <h1 style="color:hsl(300,76%,72%)">This Is Heading With HSL Color Value
+                                    </h1>
+                                    <!--	<marquee id="marquee" behavior="alternate" style="color:deeppink">
+											<b>Happy To
+												Help!</b></marquee>
+										<div id="marquee">
+											Happy To Help!
+										</div>-->
+                                    <hr>
+                                    <!--Footer-->
+                                    <div class="w3-row-padding w3-center w3-small" style="margin:0 -16px">
+                                        <div class="w3-col l3 m3 s12">
+                                            <a class="w3-button w3-light-grey w3-block" href="javascript:void(0);" onclick="displayError();return false" style="white-space:nowrap;text-decoration:none;margin-top:1px;margin-bottom:1px">REPORT
+														ERROR</a>
+                                        </div>
+                                        <div class="w3-col l3 m3 s12">
+                                            <!--<a class="w3-button w3-light-grey w3-block"
+														href="javascript:void(0);" target="_blank"
+														onclick="onclick="myFunction()";"
+														style="text-decoration:none;margin-top:1px;margin-bottom:1px">PRINT
+														PAGE</a>-->
+                                            <button class="w3-button w3-light-grey w3-block" onclick="myFunction()">Print</button>
+
+                                        </div>
+                                        <div class="w3-col l3 m3 s12">
+                                            <a class="w3-button w3-light-grey w3-block" href="/home/system/Desktop/HTML Work/Pages/default.asp" target="_blank" style="text-decoration:none;margin-top:1px;margin-bottom:1px">FORUM</a>
+                                        </div>
+                                        <div class="w3-col l3 m3 s12">
+                                            <a class="w3-button w3-light-grey w3-block" href="Portfolio\port.html" target="_top" style="text-decoration:none;margin-top:1px;margin-bottom:1px">ABOUT</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

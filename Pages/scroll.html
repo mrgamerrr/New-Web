@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          
+     </head>
+<style>
+     .step-scroller .caret {
+          border-bottom: solid 3px #fff;
+          border-right: solid 3px #fff;
+          display: inline;
+          height: 5px;
+          margin: 22px 23px;
+          opacity: 1;
+          padding: 3px;
+          position: absolute;
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          transition: top .6s, -webkit-transform .6s;
+          transition: top .6s, transform .6s;
+          width: 5px;
+     }
+
+     .step-scroller .caret.open {
+          top: 4px;
+          -webkit-transform: rotate(-135deg);
+          -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg)
+     }
+
+     .step-scroller .caret.close {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg)
+     }
+
+     .step-scroller .dot {
+          background-color: #dd5347;
+          border-radius: 50%;
+          bottom: -90px;
+          box-shadow: 0 14px 59px -7px rgba(0, 0, 0, 0.85);
+          cursor: pointer;
+          height: 60px;
+          position: fixed;
+          right: 20px;
+          transition: bottom .6s;
+          width: 60px;
+          z-index: 9
+     }
+
+     .step-scroller .dot.loaded {
+          bottom: 20px;
+          transition: bottom .6s .25s
+     }
+
+     .step-scroller .dot.boost {
+          bottom: 25px
+     }
+
+     @media only screen and (max-width: 777px) {
+          .step-scroller .caret {
+               border-bottom: solid 1px #fff;
+               border-right: solid 1px #fff;
+               height: 5px;
+               margin: 13px 15px;
+               padding: 2px
+          }
+
+          .step-scroller .dot {
+               box-shadow: 0 14px 44px -5px rgba(0, 0, 0, 0.85);
+               height: 40px;
+               width: 40px
+          }
+
+          .step-scroller .dot.boost {
+               bottom: 20px
+          }
+     }
+</style>
+<div data-step-scroller></div>
+
+<script type="text/ng-template" id="step-scroller.html">
+<div class="step-scroller">
+  <div class="dot" ng-click="scrollClick()" ng-class="{boost: (nextCount() === 0 && allLoaded()), loaded: allLoaded()}">
+    <i id="scroll-caret" class="caret" ng-class="{open: nextCount() === scrollTargetCount() - 1, closed: nextCount() !== scrollTargetCount() - 1}">&nbsp;</i>
+  </div>
+</div>
+</script>
+</html>

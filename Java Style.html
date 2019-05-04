@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Style Change With JavaScript</title>
+</head>
+
+<body>
+    <!-- Change Of Style-->
+    <p id="style" style="text-align:center">JavaScript Can Change The Style Of An HTML Element.</p>
+    <button type="button"  onclick="myFunction()">Change The Style!</button>
+
+    <script>
+        function myFunction() {
+            document.getElementById("style").style.fontSize = "25px";
+            document.getElementById("style").style.color = "tomato";
+            document.getElementById("style").style.backgroundColor = "black";
+        }
+    </script>
+</body>
+
+</html> 

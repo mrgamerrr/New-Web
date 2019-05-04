@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+    <!--Loader-->
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid blue;
+            border-right: 16px solid green;
+            /*border-bottom: 16px solid red;*/
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+<style>
+    /*BackGround Image*/
+    
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    
+    .bg {
+        background-image: url("Images/unsplash25.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    form {
+        border: 0px solid #f1f1f1;
+    }
+    
+    input[type=text],
+    input[type=password] {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        background: #f1f1f1;
+    }
+    
+    input:hover,
+    input:focus {
+        opacity: 0.7;
+        color: #08c;
+        border: 1px solid #08c;
+        box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px 3px 6px rgba(0, 0, 0, 0.25);
+    }
+    
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0px 1px 15px rgba(0, 246, 255, 0.5);
+        border: 1px solid #08c;
+        outline: none;
+    }
+    
+     ::placeholder {
+        color: orange;
+        opacity: 2;
+    }
+    
+    button {
+        text-align: center;
+        background-color: #4CAF50;
+        color: rgba(7, 31, 245, 0.932);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 12%;
+        opacity: 0.9;
+        text-decoration-style: solid;
+    }
+    
+    input[type="submit"]:hover {
+        background: #08c;
+        width: 120px;
+        border: 1px solid #0a5378;
+        border-radius: 3px;
+        box-shadow: inset 0px 3px 16px rgba(0, 0, 0, 0.25), 0px 1px 10px rgba(255, 255, 255, 0.5), inset 0px -1px 2px rgba(255, 255, 255, 0.35);
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.65);
+        -webkit-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+    }
+    
+    .cancelbtn {
+        text-align: center;
+        background-color: #f44336;
+        color: rgba(7, 31, 245, 0.932);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 12%;
+        opacity: 0.9;
+    }
+    
+    .imgcontainer {
+        text-align: left;
+        margin: 24px 0 12px 0;
+    }
+    
+    img.avatar {
+        width: 17%;
+        border-radius: 45%;
+    }
+    
+    .container {
+        text-align: left;
+        padding: 16px;
+        color: orange;
+    }
+    
+    span.psw {
+        float: right;
+        padding-top: 16px;
+        color: #f44336;
+    }
+    
+    span.dsw {
+        float: left;
+        padding-top: 16px;
+        color: orange;
+    }
+    /* Style For Link */
+    
+    a:link {
+        color: rgb(160, 7, 248);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:visited {
+        color: rgb(160, 7, 248);
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    /* Change styles for span and cancel button on extra small screens */
+    
+    @media screen and (max-width: 300px) {
+        span.uname {
+            display: block;
+            float: center;
+            color: orange;
+        }
+        .cancelbtn {
+            text-align: center;
+            width: 100%;
+        }
+    }
+</style>
+
+<body class="bg">
+
+    <!--Brand Image & Home Button-->
+    <div class="bg">
+        <a class="navbar-brand" href="index.html" title="Back to homepage">
+            <img src="Favicon/Html2.png" width="147" onerror="this.src=''; this.onerror=null;" alt="HTML" class="img-responsive">
+        </a>
+
+
+        <h2 style="text-align: center; color: orange;">Log In</h2>
+        <!--
+          <a href="/home/system/Desktop/HTML Work/1Home.html">
+          <input type="image" src="Home.png" alt="Submit" width="48" height="48">
+     </a>
+     -->
+        <form action="index.html" autocomplete="off">
+
+
+            <!--Container Image
+          <div class="imgcontainer">
+               <img src="Unsplash18.jpg" alt="Avatar" class="avatar">
+          </div> -->
+
+
+            <!--Fields-->
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <br>
+                <input type="text" placeholder="Enter Username" name="psw">
+                <br>
+                <label for="psw"><b>Password</b></label>
+                <br>
+                <input type="password" placeholder="Enter Password" name="psw">
+                <br>
+                <label>
+                         <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                <br>
+                <button type="submit">Login</button>
+                <button type="reset" class="cancelbtn">Cancel</button>
+                <br>
+            </div>
+
+            <!--Register And Forgot Password Link-->
+            <span class="dsw"><a href="3signup.html">Register</a></span>
+            <span class="psw"><a href="4Forgot Pass.html">Forgot Password</a></span>
+        </form>
+    </div>
+</body>
+
+</html>
