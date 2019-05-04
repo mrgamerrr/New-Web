@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
 }
@@ -26,4 +27,34 @@ body {
 
 .song-link {
     color: aliceblue;
+=======
+body {
+    margin: 0;
+}
+
+.profile-pic {
+    border-radius: 25%;
+    align-self: center;
+    height: 200px;
+    width: 200px;
+}
+
+.site-headders {
+    background-color: aqua;
+    color: aliceblue;
+    height: 100vh;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-headder-content {
+    margin: 10px;
+}
+
+.song-link {
+    color: aliceblue;
+>>>>>>> ef2dc1636a754971cd22f557471781385da707bd
 }
