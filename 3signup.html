@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="HTML">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Everything">
+    <!--	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="w3.css">
+    <title>
+        Sign Up
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    html {
+        box-sizing: border-box;
+    }
+    /*Background Image*/
+    
+    .bg-img {
+        /* The image used */
+        background-image: url("Images/unsplash24.jpg");
+        height: 100%;
+        margin: 0;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+    /* Center align input fields */
+    
+    input[type=text],
+    input[type=password] {
+        width: 25%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+    }
+    
+    input:hover,
+    input:focus {
+        opacity: 0.7;
+        color: deeppink;
+        border: 1px solid #08c;
+        /*box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.932),
+    inset 0px 3px 6px rgba(0, 0, 0, 0.25);*/
+    }
+    
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        /* box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35),
+    0px 1px 15px rgba(0, 246, 255, 0.5); */
+        border: 1px solid #08c;
+        outline: none;
+    }
+    
+     ::placeholder {
+        color: deeppink;
+        opacity: 2;
+    }
+    /*   input[type=text]:focus,
+         input[type=password]:focus 
+                    {
+                        background-color: aqua;
+                        outline: none;
+                        text-align: left;
+                        background: rgb(0, 0, 0); 
+                        background: rgba(0, 0, 0, 0.5);           
+                    }*/
+    
+    hr {
+        border: 0px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+    /* Set a style for all buttons */
+    
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 20%;
+        opacity: 0.9;
+    }
+    
+    .buttonw {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 25%;
+        opacity: 0.9;
+    }
+    
+    button:hover {
+        opacity: 1;
+    }
+    /* Extra styles for the cancel button */
+    
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #f44336;
+    }
+    /* Float cancel and signup buttons and add an equal width */
+    
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /* Add padding to container elements */
+    
+    .container {
+        padding: 0px;
+        color: orange;
+    }
+    /* Clear floats */
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    span.psw {
+        display: block;
+        float: center;
+        color: deeppink;
+    }
+    /* Change styles for cancel button and signup button on extra small screens */
+    
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 50%;
+        }
+    }
+</style>
+<script type="text/javascript">
+    // Set up global variable
+    var result;
+
+    function showPosition() {
+        // Store the element where the page displays the result
+        result = document.getElementById("result");
+
+        // If geolocation is available, try to get the visitor's position
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+            result.innerHTML = "Getting the position information...";
+        } else {
+            alert("Sorry, your browser does not support HTML5 geolocation.");
+        }
+    };
+
+    // Define callback function for successful attempt
+    function successCallback(position) {
+        result.innerHTML = "Your current position is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+    }
+
+    // Define callback function for failed attempt
+    function errorCallback(error) {
+        if (error.code == 1) {
+            result.innerHTML = "You've decided not to share your position, but it's OK. We won't ask you again.";
+        } else if (error.code == 2) {
+            result.innerHTML = "The network is down or the positioning service can't be reached.";
+        } else if (error.code == 3) {
+            result.innerHTML = "The attempt timed out before it could get the location data.";
+        } else {
+            result.innerHTML = "Geolocation failed due to unknown error.";
+        }
+    }
+</script>
+
+<body>
+    <!--Background Image-->
+    <div class="bg-img">
+
+        <!--Brand Image & Home Button-->
+        <a class="navbar-brand" href="index.html" title="Back to homepage">
+            <img src="Favicon/Html2.png" width="147" onerror="this.src=''; this.onerror=null;" alt="HTML" class="img-responsive">
+        </a>
+
+        <!--  <a href="/home/system/Desktop/HTML Work/1Home.html">
+          <input type="image" src="Home.png" alt="Submit" width="48" height="48">
+    </a>-->
+
+        <form action="" autocomplete="off" style="border:1px solid #ccc">
+            <!--   <div class="container">-->
+            <h1 style="text-align:center; color:orange;">Sign Up</h1>
+            <p style="color:deeppink;">Please fill in this form to create an account.</p>
+            <hr>
+
+            <label for="First Name"><b>First Name:</b></label>
+            <br>
+            <input type="text" placeholder="Enter First Name" name="psw">
+            <br>
+
+            <label for="Last Name"><b>Last Name:</b></label>
+            <br>
+            <input type="text" placeholder="Last Name" name="psw">
+            <br>
+
+            <label for="Username"><b>Username:</b></label>
+            <br>
+            <input type="text" placeholder="Enter Username" name="psw">
+            <br>
+
+            <label for="email"><b>Email:</b></label>
+            <br>
+            <input type="text" placeholder="Enter Email" name="psw">
+            <br>
+
+            <label for="psw"><b>Password:</b></label>
+            <br>
+            <input type="password" placeholder="Must have at least 6 characters" name="psw">
+            <br>
+
+            <label for="psw-repeat"><b>Repeat Password:</b></label>
+            <br>
+            <input type="password" placeholder="Repeat Password" name="psw">
+            <br>
+            <br>
+            <div id="result">
+                <!--Position information will be inserted here-->
+                <input type="text" id="">
+            </div>
+            <button type="button" onclick="showPosition();">Share Location</button>
+            <br>
+            <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms &
+                        Conditions</a>.
+            </p>
+            <p>If you'r allready a member please <a href="2Log in.html" style="color:dodgerblue">Sign
+                        In</a></p>
+            <div class="clearfix">
+                <a href="2Log in.html" class="w3-btn w3-green w3-left" style="width:30%; margin:8px 0; padding:14px 20px">Sign Up</a>
+                <a href="" class="w3-btn w3-red w3-left" style="width:30%; margin:8px 0; padding:14px 20px">Cancel</a>
+            </div>
+    </div>
+    </form>
+
+    </div>
+    </div>
+
+</body>
+
+</html>

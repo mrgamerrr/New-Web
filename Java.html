@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>My First JavaScript</h1>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click To Display Date & Time
+    </button>
+    <p id="demo"></p>
+    <!-- Change Of Content -->
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="java">This Is Demonstration</p>
+    <script>
+        function myFunction() {
+            document.getElementById("java").innerHTML = "Hello JavaScript!";
+        }
+    </script>
+
+    <script>
+        function light(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "bulboff.gif"
+            } else {
+                pic = "bulbon.gif"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
+    <img id="myImage" src="bulboff.gif" width="100" hright="100">
+    <p>
+        <button type="button" onclick="light(1)">Light On</button>
+        <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+    <p id="no"></p>
+    <script>
+        document.getElementById("no").innerHTML = "Hello JavaScript!";
+    </script>
+    <noscript>Sorry, Your Browser Does not Support JavaScript</noscript>
+</body>
+
+</html>
